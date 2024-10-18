@@ -1,12 +1,8 @@
-// Literal Types
-// 1. Based on what we have learnt about literal types with the price, can you make
-// a Country literal type? You only have to include the countries we are dealing with in 
-// the project.
-// 2. Can you create a file and store all your types aliases in there?
+// Function Return Types + Void Types
 
 import { showReviewTotal, populateUser, showDetails } from './utils'
-import { Permissions , LoyaltyUser } from './enums'
 import { Price, Country } from './types'
+import { Permissions , LoyaltyUser } from './enums'
 const propertyContainer = document.querySelector('.properties')
 const footer = document.querySelector('.footer')
 
@@ -53,7 +49,7 @@ const properties : {
         firstLine: string;
         city: string;
         code: number;
-        country: Country;
+        country: string;
     };
     contact: [ number, string ];
     isAvailable: boolean;
