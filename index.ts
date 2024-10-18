@@ -1,4 +1,6 @@
-// Function Return Types + Void Types
+// Function Return Types + Void Types mini-challenge
+// Instead of having a long 'review total 3', can you make the line say '3 reviews', or '1 review'
+// if there is only one? Use a function to do this and assing a type to the functions return.
 
 import { showReviewTotal, populateUser, showDetails } from './utils'
 import { Price, Country } from './types'
