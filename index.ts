@@ -36,11 +36,15 @@ totalReviews(reviews.length, reviews[0].name, reviews[0].loyaltyUser)
 
 // TS already does this so no need.
 const you: {
-    userName: string;
+    firstName: string;
+    lastName: string;
     isReturning: boolean;
+    age: number;
 } = {
-    userName: 'Bobby',
+    firstName: 'Bobby',
+    lastName: 'Brown',
     isReturning: true,
+    age: 36
 }
 
 
