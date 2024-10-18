@@ -4,6 +4,8 @@
 // : number
 export const reviewTotalDisplay = document.querySelector('#reviews')
 
+let isOpen : boolean
+
 const reviews = [
     {
         name: 'Sheia',
