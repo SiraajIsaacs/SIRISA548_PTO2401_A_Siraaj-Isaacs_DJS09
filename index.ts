@@ -34,7 +34,11 @@ function totalReviews (value : number, reviewer: string, isLoyalty : boolean) {
     
 totalReviews(reviews.length, reviews[0].name, reviews[0].loyaltyUser)
 
-const you = {
+// TS already does this so no need.
+const you: {
+    userName: string;
+    isReturning: boolean;
+} = {
     userName: 'Bobby',
     isReturning: true,
 }
