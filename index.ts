@@ -1,10 +1,12 @@
-// Number Types mini-challenge 10 10.2
-// Write a function that will only accept numbers and attend to 
-// all TypeScript weakness flags.
-// : number
-export const reviewTotalDisplay = document.querySelector('#reviews')
+// Array Types
+// Can you add a stayedAt property to the you Object, that contains places you 
+// have stayed as strings, then add the correct key with assigned type to the 
+// existing Object Type?
 
-let isOpen : boolean
+const returningUserDisplay = document.querySelector('#returning-user')
+const userNameDisplay = document.querySelector('#user')
+const reviewTotalDisplay = document.querySelector('#reviews')
+let isOpen: boolean
 
 const reviews = [
     {
@@ -27,32 +29,36 @@ const reviews = [
     },
 ]
 
-function totalReviews (value : number, reviewer: string, isLoyalty : boolean) {
-    const iconDisplay = isLoyalty ? "*" : ""
-    reviewTotalDisplay.innerHTML = 'review total: ' + value.toString() + '\ last reviewed by: ' + reviewer + iconDisplay
-}
-    
-totalReviews(reviews.length, reviews[0].name, reviews[0].loyaltyUser)
 
-// TS already does this so no need.
+function showReviewTotal(value: number, reviewer: string, isLoyalty: boolean) {
+    const iconDisplay = isLoyalty ? '⭐' : ''
+    reviewTotalDisplay.innerHTML = 'review total ' + value.toString() + '| last reviewed by ' + reviewer + ' ' + iconDisplay
+}
+
+showReviewTotal(reviews.length, reviews[0].name, reviews[0].loyaltyUser)
+
+
 const you: {
     firstName: string;
     lastName: string;
     isReturning: boolean;
     age: number;
+    stayedAt: 
 } = {
     firstName: 'Bobby',
     lastName: 'Brown',
     isReturning: true,
-    age: 36
+    age: 35,
+    stayedAt: ['florida-home', 'oman-flat', 'tokyo-bungalow']
 }
 
 
-function populateUser(isReturning : boolean, userName : string ) {
+function populateUser(isReturning : boolean, userName: string ) {
     if (isReturning){
         returningUserDisplay.innerHTML = 'back'
     }
     userNameDisplay.innerHTML = userName
 }
 
-populateUser(you.isReturning, you.userName)
+populateUser(you.isReturning, you.firstName)
+
