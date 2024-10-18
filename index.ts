@@ -1,11 +1,8 @@
-// Interfaces
-// 1. Based on what we have learnt in this lesson, and what we discussed in the previous one,
-// please get rid of the uncessary code in this project and replace it with the Review interface
-// 2. Move the interface to its own file for the next lesson
-
+// Modules
 import { showReviewTotal, populateUser, showDetails, getTopTwoReviews} from './utils'
-import { Price, Country} from './types'
-import { Review } from './interfaces'
+import { Price, Country } from './types' // multiple exports
+import { Permissions , LoyaltyUser } from './enums' // multiple exports
+import  Review  from './interfaces' // export default
 const propertyContainer = document.querySelector('.properties')
 const reviewContainer = document.querySelector('.reviews')
 const container = document.querySelector('.container')
@@ -14,21 +11,10 @@ const footer = document.querySelector('.footer')
 
 let isLoggedIn: boolean
 
-enum Permissions {
-    ADMIN = 'ADMIN', 
-    READ_ONLY = 'READ_ONLY'
-}
-
-enum LoyaltyUser {
-    GOLD_USER = 'GOLD_USER',
-    SILVER_USER = 'SILVER_USER',
-    BRONZE_USER = 'BRONZE_USER'
-}
-
 // Reviews
 const reviews: Review[] = [
     {
-        name: 'Sheia',
+        name: 'Sheila',
         stars: 5,
         loyaltyUser: LoyaltyUser.GOLD_USER,
         date: '01-04-2021'
@@ -129,7 +115,7 @@ for (let i = 0; i < properties.length; i++) {
 }
 
 let count = 0
-function addReviews(array: Review[]) : void {
+function addReviews(array : Review[]) : void {
     if (!count ) {
         count++
         const topTwo = getTopTwoReviews(array)
