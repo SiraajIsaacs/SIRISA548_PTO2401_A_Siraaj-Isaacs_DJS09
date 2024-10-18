@@ -1,18 +1,13 @@
-// Any Type
-// 1. Add a description property to Omars review, and give it a value. 
-// 2. Next try addressing what TypeScript does not like.
-// 3. Now, imagine we DON'T know what kind of review object we are going to 
-// get next.
-
+// Union Types
 import { showReviewTotal, populateUser } from './utils'
 import { Permissions , LoyaltyUser } from './enums'
 const propertyContainer = document.querySelector('.properties')
 const footer = document.querySelector('.footer')
 
-let isOpen: boolean
+let isLoggedIn: boolean
 
 // Reviews
-const reviews : any[]= [
+const reviews : any[] = [
     {
         name: 'Sheia',
         stars: 5,
@@ -30,11 +25,10 @@ const reviews : any[]= [
         stars: 4,
         loyaltyUser: LoyaltyUser.SILVER_USER,
         date: '27-03-2021',
-        description: 'Great hosts, location was a bit further than said',
+        description: 'Great hosts, location was a bit further than said.'
     },
 ]
 
-// User
 const you = {
     firstName: 'Bobby',
     lastName: 'Brown',
